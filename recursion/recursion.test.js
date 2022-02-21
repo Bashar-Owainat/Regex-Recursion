@@ -2,11 +2,14 @@
 
 function division(number, dividedBy){
     // Write you logic here.
+    let divisionTimes = 0
     if(number == 0 || dividedBy == 0){
         return 0;
     }
+    
     else{
-        return number/dividedBy;
+        divisionTimes += 1;
+        return divisionTimes + division(number - dividedBy, dividedBy);
     }
    
 }
@@ -37,9 +40,19 @@ Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n){
     // Write you logic here.
-    let arr = [0,1,1,2,3,5];
-
-    return arr[n];
+    if(n == 0){
+        return 0;
+    }
+    else if(n == 1){
+        return 1;
+    }
+    else if(n == 2){
+        return 1;
+    }
+    else{
+      return  fibonacci(n-1) +fibonacci(n-2);
+    }
+    
 }
 
 /* Optional 
