@@ -5,9 +5,10 @@
 /* Write a function that take a string and return true if the string only contain uppercase and lowercase
 characters (no numbers and symbols) and it should end with capital A else return false */
 
+
 function capitalA(s){
     // Add your logic
-    let pattern = /A$/;
+    let pattern = /^[^0-9]+[A-Za-z]+ A$/g;
     let result = pattern.test(s);
     return result;
 }
@@ -18,9 +19,10 @@ function capitalA(s){
 /* Write a function that take a string and return true if the the sting is following the emails pattern
 which end with io (example@example.io) */
 
+
 function ioEmail(email){
     // Add your logic.
-    let pattern = /example@example.io$/;
+    let pattern = /^[A-Za-z]+@[A-Za-z]+.io$/;
         let result = pattern.test(email);
         return result;
     
